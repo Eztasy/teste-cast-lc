@@ -1,6 +1,7 @@
 # teste-cast-lc
+<<<<<<< HEAD
 vai ser um site criado em conjunto, o objetivo é 
-ganhar experiencia de trabalho em eqipe.
+ganhar experiencia de trabalho em equipe.
 
 você vai instalar normalmente o git
 depois que ele for instalado você pode fechar ele.
