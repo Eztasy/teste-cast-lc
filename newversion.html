@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-gallery img {
+            margin: 10px;
+            border: 2px solid #ccc;
+            width: 200px;
+            height: 150px;
+            cursor: pointer;
+        }
+        .image-gallery img:hover {
+            border: 2px solid #333;
+        }
+        .download-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-button:hover {
+            background-color: #45a049;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function enlargeImage(src) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Primeiro Jogo</h1>
+        <p>Esse é meu primeiro jogo, espero que gostem! A gameplay é no estilo visual novel com exceção de alguns minigames. Conheça as meninas na pizzaria e se torne um dono de franquias bem sucedido nessa história.</p>
+        <div class="image-gallery">
+            <img src="https://preview.redd.it/blender-cinematic-toy-chica-v0-ojk3c2heyvac1.png?width=1080&crop=smart&auto=webp&s=a41999d119d1f690619dc9b4baf07f4da7fff63d" alt="Screenshot 1" onclick="enlargeImage(this.src)">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb94acbb-d6b1-4f13-b898-dd02f55e52b1/dc6z6st-afa20e8f-a0b5-4698-9bee-0ee1b6341ecf.png/v1/fill/w_600,h_450,q_80,strp/toy_bonnie_female_by_chrisflower_dc6z6st-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDUwIiwicGF0aCI6IlwvZlwvZWI5NGFjYmItZDZiMS00ZjEzLWI4OTgtZGQwMmY1NWU1MmIxXC9kYzZ6NnN0LWFmYTIwZThmLWEwYjUtNDY5OC05YmVlLTBlZTFiNjM0MWVjZi5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.cmuXSg8qwQVUYDyJSU-EwbP5QutW1A1SBV98KCpZ12Q" alt="Screenshot 2" onclick="enlargeImage(this.src)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8D4hHwrFaANmGtRp52Wk86BZIeUYNJKoXRA&s" alt="Screenshot 3" onclick="enlargeImage(this.src)">
+        </div>
+        <a href="link-para-download-do-jogo" class="download-button">Baixar o Jogo</a>
+    </div>
+
+    <div id="imageModal" style="display:none; position:fixed; z-index:1000; padding-top:60px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgb(0,0,0); background-color:rgba(0,0,0,0.9);">
+        <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+        <img id="modalImage" style="margin:auto; display:block; width:80%; max-width:700px;">
+    </div>
+</body>
+</html>
